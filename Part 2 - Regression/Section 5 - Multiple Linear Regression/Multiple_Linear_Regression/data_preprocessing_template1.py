@@ -62,6 +62,7 @@ regressor_OLS=sm.OLS(endog=y,exog=X_opt).fit()
 regressor_OLS.summary()
 
 #removing column1 with p-value 0.940 i.e dummy variable
+
 X_opt=X[:,[0,3,4,5]]
 regressor_OLS=sm.OLS(endog=y,exog=X_opt).fit()
 regressor_OLS.summary()
