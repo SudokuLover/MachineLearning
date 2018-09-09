@@ -8,7 +8,8 @@ import pandas as pd
 # Importing the dataset
 dataset = pd.read_csv('Position_Salaries.csv')
 X = dataset.iloc[:, 1:2].values
-y = dataset.iloc[:, 2].values
+y = dataset.iloc[:, 2].values.reshape(-1,1)
+#creating 2 d array for urther processing
 
 # Splitting the dataset into the Training set and Test set
 """from sklearn.cross_validation import train_test_split
